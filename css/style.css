@@ -17,10 +17,22 @@
   --title-color: #2c3038;
   --text-color: #5a5a5a;
   --light-bg-color: #f7f9fc;
+  --white-bg-color:#fff;
   --card-curve: 6px;
   --card-box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
   --card-hover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
   --transformY: translateY(-0.5rem);
+  --lighter-hover-color:#fff;
+  --lighter-hover-border-color:#eee;
+}
+.dark-mode{
+  --white-bg-color:#181a1b;
+  --title-color: rgb(200, 195, 188);
+  --text-color: #afa89e;
+  --light-bg-color: #1b1d1e;
+  --lighter-hover-color:rgb(24, 26, 27);
+  --lighter-hover-border-color:rgb(53, 57, 59);
+  --card-hover-box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.09);
 }
 @media (min-width: 1280px) {
   .container {
@@ -66,7 +78,7 @@
 /* Header navbar */
 header {
   position: fixed;
-  background-color: #fff;
+  background-color: var(--white-bg-color);
   padding: 0px;
   transition: all 0.4s ease 0s;
   height: 90px;
@@ -92,6 +104,7 @@ header {
     justify-content: flex-start;
   }
 }
+
 .navbar .navbar-brand {
   margin: 0;
   padding: 0;
@@ -211,6 +224,11 @@ header {
   color: white;
   border-color: transparent;
 }
+.nav-item3 {position:relative;
+top:2px;}
+.nav-item3 {font-size:30px;
+color:grey}
+
 /* Carousel */
 #carousel {
   margin-top: 90px;
@@ -249,12 +267,12 @@ header {
 #carousel .content-left h3 {
   font-size: 50px;
   line-height: 57.5px;
-  color: var(--title-color);
+  color: #2c3038;
   font-weight: 700;
   font-family: "Nunito", sans-serif;
 }
 #carousel .content-left p {
-  color: var(--text-color);
+  color: #5a5a5a;
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
@@ -274,6 +292,7 @@ header {
 #index-1 {
   padding-bottom: 3rem !important;
   padding-top: 3rem !important;
+  background-color:var(--white-bg-color);
 }
 
 .header-section {
@@ -306,6 +325,7 @@ header {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+#icon-theme{cursor:pointer}
 #index-1 .item-block {
   border-radius: var(--card-curve);
   transition: 0.3s ease-in;
@@ -317,8 +337,8 @@ header {
 
 #index-1 .item-block:hover {
   transition: 0.3s ease-in;
-  background-color: #ffffff;
-  border: 1px solid #eee;
+  background-color: var(--lighter-hover-color);
+  border: 1px solid var(--lighter-hover-border-color);
   box-shadow: var(--card-hover-box-shadow);
   transform: var(--transformY);
 }
@@ -400,13 +420,16 @@ img.img-curve {
   }
 }
 #count .stats_info {
-  background-color: #fff;
+  background-color: var(--lighter-hover-color);
   padding: 2rem;
   border-radius: var(--card-curve);
   box-shadow: var(--card-box-shadow);
   transition: 0.3s ease;
-  border: 1px solid #eee;
+  border: 1px solid var(--lighter-hover-border-color);
 }
+#count .stats_info:hover {
+  box-shadow: var(--card-hover-box-shadow);
+  transition: 0.3s ease;}
 #count .stats_info h4 {
   font-size: 16px;
   line-height: 24.5px;
@@ -461,13 +484,16 @@ img.img-curve {
   line-height: 24.5px;
 }
 /* News */
+#news{
+  background-color:var(--white-bg-color);
+}
 #news #grid-news .grid-info {
   border-radius: var(--card-curve);
   transition: 0.3s ease-in;
   display: block;
   height: 100%;
-  background: #fff;
-  border: 1px solid #eee;
+  background-color: var(--white-bg-color);
+  border: 1px solid var(--lighter-hover-border-color);
 }
 #news .grid-view a.zoom {
   border-top-left-radius: var(--card-curve);
@@ -493,20 +519,20 @@ img.img-curve {
   padding-bottom: 0px;
   position: absolute;
   top: 0;
-  background: var(--primary);
+  background-color: var(--primary);
   padding: 15px;
   margin-bottom: 0;
   right: 0;
   margin-top: 0;
 }
 #news .blog-info {
-  background: #fff;
+  background-color:var(--lighter-hover-color);
   padding: 30px 20px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 #news label.tag-label.red {
-  background: rgba(238, 97, 120, 0.2);
+  background-color: rgba(238, 97, 120, 0.2);
   color: var(--primary);
 }
 #news label.tag-label {
@@ -531,7 +557,7 @@ img.img-curve {
   line-height: 24.5px;
   color: var(--text-color);
   margin-top: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--lighter-hover-border-color);
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -578,4 +604,17 @@ img.img-curve {
 #news label.tag-label.blue {
   background: rgba(0, 0, 255, 0.2);
   color: #0000ff;
+}
+/* Light/dark mode */
+#theme-icon{
+  cursor:pointer;
+  width:50%;
+  line-height:30px;
+  text-align:center;
+  position:fixed;
+  bottom:30px;
+  left:-330px;
+  z-index:10;
+  background-color:#cf2952;
+
 }
