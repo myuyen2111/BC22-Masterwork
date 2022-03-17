@@ -69,7 +69,7 @@
                 >Pages
                 <i
                   class="fa fa-angle-down"
-                  style="font-size: 16px; color: #2c3038"
+                  style="font-size: 16px; color: var(--title-color)"
                 ></i
               ></a>
             </li>
@@ -80,8 +80,13 @@
               <a class="btn btn-outline-primary theme-button" href="#"
                 >Schedule a Demo</a
               >
+              <li id="icon-theme" class="nav-item3 ">
+                <i class="fas fa-moon"></i>
+              </li>
+              
             </li>
           </ul>
+          
         </div>
       </nav>
     </header>
@@ -108,7 +113,7 @@
       </div>
       <div class="clear"></div>
     </section>
-    <div style="margin: 8px auto; display: block; text-align: center"></div>
+  
     <!-- Why choose us Index 1-->
     <section id="index-1" class="py-5">
       <div class="container">
@@ -161,7 +166,7 @@
         </div>
       </div>
     </section>
-    <div style="margin: 8px auto; display: block; text-align: center"></div>
+   
     <!-- About -->
     <section id="about" class="py-5">
       <div class="container py-lg-3 mt-3">
@@ -227,7 +232,6 @@
         </div>
       </div>
     </section>
-    <div style="margin: 8px auto; display: block; text-align: center"></div>
     <!-- True ourselves index-2 -->
     <section id="index-2">
       <div class="index-2_wrapper">
@@ -315,6 +319,7 @@
         </div>
       </section>
     </section>
+  
     <!-- Script -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -347,5 +352,9 @@
       integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
       crossorigin="anonymous"
     ></script>
+<script> var icon=document.getElementById("icon-theme");
+icon.onclick=function(){
+  document.body.classList.toggle("dark-mode");};
+  </script>
   </body>
 </html>
