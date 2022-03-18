@@ -28,7 +28,12 @@
   --pull-right: #0d1326;
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Nunito", sans-serif;
 }
 
@@ -201,10 +206,10 @@ header {
 .nav-item3 {
   position: absolute;
   /* top: 2px; */
-  right: -150px;
+  right: -50px;
 }
 .nav-item3 {
-  font-size: 30px;
+  font-size: 32px;
   color: grey;
 }
 
@@ -1118,6 +1123,7 @@ img.img-curve {
   margin-top: 28px;
   border-radius: 5px;
   box-shadow: 1px 5px 7.5px rgba(196, 196, 196, 0.2);
+  background-color: var(--white-bg-color) !important;
 }
 
 .footer .row .col__right .end-column h1 {
@@ -1310,8 +1316,8 @@ img.img-curve {
   text-align: center;
   line-height: 50px;
   position: fixed;
-  bottom: 90px;
-  right: 0;
+  bottom: 100px;
+  right: 0px;
   opacity: 0;
   z-index: 999;
 }
